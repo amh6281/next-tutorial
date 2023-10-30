@@ -1,4 +1,5 @@
 import { MongoClient } from "mongodb";
+
 const url =
   "mongodb+srv://admin:qwer1234@cluster0.im76xsu.mongodb.net/?retryWrites=true&w=majority";
 const options = { useNewUrlParser: true };
@@ -10,6 +11,6 @@ if (process.env.NODE_ENV === "development") {
   }
   connectDB = global._mongo;
 } else {
-  connectDB = new MongoClient(url, options).connect();
+  connectDB = new MongoClient(url, options).connect(); // 변수에 저장해놓고 쓰면 매번 실행x
 }
 export { connectDB };

@@ -8,7 +8,7 @@ const DetailLink = ({ url }) => {
   const handleClick = () => {
     router.push(`/detail/${url}`);
   };
-
+  aa;
   return <button onClick={handleClick}>보기</button>;
 };
 

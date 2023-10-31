@@ -1,6 +1,7 @@
 import { connectDB } from "@/util/database";
 import React from "react";
 import DetailLink from "./DetailLink";
+import Link from "next/link";
 
 const page = async () => {
   const db = (await connectDB).db("forum");
@@ -13,6 +14,7 @@ const page = async () => {
           <h4>글제목 : {item.title}</h4>
           <p>1월 1일</p>
           <DetailLink url={item._id} />
+          <Link href={`/edit/${item._id}`}>수정</Link>
         </div>
       ))}
     </div>
